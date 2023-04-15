@@ -1,1 +1,1 @@
-print("Hello, World!") # ez
+print("Hello, World!"); # i use semicolons to cope
