@@ -21,12 +21,21 @@ function goto {
         "usr" {
             Set-Location -Path "$HOME"
         }
+        "adata" {
+            Set-Location -Path "$HOME/Appdata/Roaming"
+        }
         default {
             echo "Invalid location"
         }
     }
 
     ls
+}
+
+function dieHist {
+    cd C:\Users\matti\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine
+    Remove-Item -Recurse -Force ConsoleHost_history.txt
+    echo "History removed"
 }
 
 # Aliases
