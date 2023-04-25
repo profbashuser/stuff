@@ -10,3 +10,4 @@
 * Rust
 * Typescript
 * Markdown
+* lua
