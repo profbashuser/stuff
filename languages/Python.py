@@ -1,1 +1,0 @@
-print("Hello, World!"); # i use semicolons to cope
