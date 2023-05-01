@@ -33,9 +33,16 @@ function goto {
 }
 
 function dieHist {
-    cd C:\Users\matti\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine
-    Remove-Item -Recurse -Force ConsoleHost_history.txt
+    Remove-Item -Recurse -Force C:\Users\matti\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
     echo "History removed"
+}
+
+Function touch {
+    $file = $args[0]
+    if ($null -eq $file) {
+        throw "No filename supplied"
+    }
+    New-Item -ItemType file $file
 }
 
 # Aliases
