@@ -2,12 +2,8 @@
 * CSharp
 * Go
 * Haxe
-* Html & ~css~ & javascript
+* Javascript
 * Glsl shaders
 * Python
-* Swedish
-* English
-* Rust
 * Typescript
-* Markdown
 * lua
