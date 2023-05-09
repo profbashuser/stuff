@@ -1,35 +1,11 @@
 # Functions
-function Invoke-Starship-TransientFunction {
+Function Invoke-Starship-TransientFunction {
     &starship module character
 }
 
 function degit {
     Remove-Item -Recurse -Force .git
     echo "Removed Git Repository"
-}
-
-function goto {
-    # So i don't have to cd there
-    param (
-        $location
-    )
-
-    Switch ($location) {
-        "code" {
-            Set-Location -Path "$HOME/documents/code" # Why did i call the folder "code"
-        }
-        "usr" {
-            Set-Location -Path "$HOME"
-        }
-        "adata" {
-            Set-Location -Path "$HOME/Appdata/Roaming"
-        }
-        default {
-            echo "Invalid location"
-        }
-    }
-
-    ls
 }
 
 function dieHist {
@@ -43,6 +19,11 @@ Function touch {
         throw "No filename supplied"
     }
     New-Item -ItemType file $file
+}
+
+Function loadbash {
+    cls
+    & 'C:\Program Files\Git\bin\sh.exe' --login
 }
 
 # Aliases
