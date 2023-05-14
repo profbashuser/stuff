@@ -1,9 +1,2 @@
-function cls {
-    clear;
-}
-
-function scoop() {
-    powershell -ex unrestricted scoop "$@" ;
-} && export -f scoop
-
-eval "$(starship init bash)"
+test -f ~/.profile && . ~/.profile # Load .profile
+test -f ~/.bashrc && . ~/.bashrc   # Load .bashrc

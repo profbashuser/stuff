@@ -21,17 +21,16 @@ Function touch {
     New-Item -ItemType file $file
 }
 
-Function loadbash {
-    cls
-    & 'C:\Program Files\Git\bin\sh.exe' --login
-}
-
 # Aliases
-Set-Alias grep findstr
+Set-Alias grep findstr # findstr is grep
+Set-Alias bash sh # MINGW shell alias
 
-# Starship and prompt
+# Expressions
+Invoke-Expression (&scoop-search --hook)
 Invoke-Expression (&starship init powershell)
+
+# Transitientprompt
 Enable-TransientPrompt
 
-cls
-neofetch
+# cls
+# neofetch
