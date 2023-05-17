@@ -13,6 +13,12 @@ function dieHist {
     echo "History removed"
 }
 
+function instacommit {
+    git add .
+    git commit
+    git pull
+}
+
 Function touch {
     $file = $args[0]
     if ($null -eq $file) {
@@ -31,6 +37,3 @@ Invoke-Expression (&starship init powershell)
 
 # Transitientprompt
 Enable-TransientPrompt
-
-# cls
-# neofetch
